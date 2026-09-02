@@ -155,5 +155,6 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
   .filmstrip { overflow: visible; grid-auto-columns: 1fr; }
   .print-note { display: block; }
   .dolly .frame { max-width: 400px; }
+  .filmstrip { break-inside: avoid; }
   .part-head { break-inside: avoid; }
 }
