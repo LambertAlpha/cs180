@@ -103,13 +103,13 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
 .dolly { margin: 0; }
 .dolly .frame { max-width: 720px; margin: 0 auto; }
 .filmstrip {
-  margin: 1.4rem 0 0; padding: 12px 10px; background: var(--ink);
-  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(120px, 1fr); gap: 10px; overflow-x: auto;
+  margin: 1.6rem 0 0; padding: 14px 12px; background: var(--ink);
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
   border-top: 6px dotted var(--paper-2); border-bottom: 6px dotted var(--paper-2);
 }
 .filmstrip figure { margin: 0; position: relative; }
 .filmstrip img { display: block; width: 100%; height: auto; }
-.filmstrip figcaption { position: absolute; left: 6px; bottom: 6px; margin: 0; font-family: var(--mono); font-size: .68rem; color: var(--amber); background: rgba(28,25,19,.75); padding: 1px 5px; }
+.filmstrip figcaption { position: absolute; left: 8px; bottom: 8px; margin: 0; font-family: var(--mono); font-size: .78rem; color: var(--amber); background: rgba(28,25,19,.78); padding: 2px 7px; }
 
 /* 页脚 */
 .colophon { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--ink); font-family: var(--mono); font-size: .78rem; color: var(--ink-3); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
@@ -144,6 +144,7 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
   .pair { grid-template-columns: 1fr; }
   .part-head, .why { grid-template-columns: 1fr; }
   .brief, .why > div { grid-column: 1; }
+  .filmstrip { grid-template-columns: repeat(2, 1fr); }
   .index li { grid-template-columns: 3.5rem 1fr; }
   .index .meta { grid-column: 2; }
 }
@@ -160,9 +161,9 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
   .masthead, .part, .colophon { animation: none; }
   .masthead .petals { display: none; }
   .masthead .branch { opacity: .8; }
-  .filmstrip { overflow: visible; grid-auto-columns: 1fr; }
   .print-note { display: block; }
   .dolly .frame { max-width: 400px; }
-  .filmstrip { break-inside: avoid; }
+  .filmstrip { break-inside: avoid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .filmstrip figcaption { font-size: .7rem; }
   .part-head { break-inside: avoid; }
 }
