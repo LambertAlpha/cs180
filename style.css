@@ -148,6 +148,7 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
   body::before { display: none; }
   .frame { box-shadow: none; }
   .pair, .shot, .dolly, .diagram, .why { break-inside: avoid; }
+  .part { break-before: page; }
   .part-head { break-after: avoid; }
   .masthead { break-inside: avoid; break-after: avoid; }
   .masthead, .part, .colophon { animation: none; }
