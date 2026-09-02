@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 0 · Becoming Friends with My Camera · Lambert Lin</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="masthead">
+      <p class="kicker"><b>CS180 · Fall 2026</b> · Project 0 · <a href="../">portfolio</a></p>
+      <h1>Becoming Friends <em>with</em> My Camera</h1>
+      <p class="byline"><span>Lambert Lin</span><span>September 2026</span><span>Shot on iPhone 17 (main camera, 26 mm eq; longer focal lengths are sensor crops)</span></p>
+      <!-- ✍️ Lambert：一句话点题。整页最先被读到的一句。 -->
+      <p class="lede"><span class="todo">One-sentence thesis of what these photos taught me about perspective vs. zoom.</span></p>
+    </header>
+
+    <!-- ============ Part 1 ============ -->
+    <section class="part" id="part1">
+      <div class="part-head">
+        <span class="num">01</span>
+        <h2>Selfie: the wrong way vs. the right way</h2>
+        <p class="brief">Same face size in the frame; only the camera position changed.</p>
+      </div>
+
+      <div class="pair">
+        <figure class="shot">
+          <div class="frame"><img src="./media/p1_close.jpg" alt="Close-up portrait at about half a metre with the 26 mm wide lens: nose enlarged, ears hidden, window frames bending away"></div>
+          <figcaption>
+            <span class="tag tag-bad">Wrong · close &amp; wide</span>
+            <span class="exif"><b>26 mm</b> eq · d ≈ <b>0.5 m</b> (est.)</span>
+          </figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="./media/p1_far.jpg" alt="Portrait from about two metres at 80 mm equivalent, cropped so the face is the same size: natural proportions"></div>
+          <figcaption>
+            <span class="tag tag-good">Right · far &amp; zoomed</span>
+            <span class="exif"><b>80 mm</b> eq · d ≈ <b>2 m</b> (est.)</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="why">
+        <h3>Why</h3>
+        <div>
+          <!-- ✍️ Lambert：为什么第二张更好看？用自己的话，2–4 句。 -->
+          <p><span class="todo">Explain: what changed between the two shots, and why that changes how the nose/ears/background look.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Part 2 ============ -->
+    <section class="part" id="part2">
+      <div class="part-head">
+        <span class="num">02</span>
+        <h2>Architectural perspective compression</h2>
+        <p class="brief">Same building size; zoomed from far away vs. walked up close.</p>
+      </div>
+
+      <div class="pair">
+        <figure class="shot">
+          <div class="frame"><img src="./media/p2_far.jpg" alt="Facade shot from far away at 58 mm equivalent: the Campanile looms right behind the building"></div>
+          <figcaption>
+            <span class="tag tag-bad">Far &amp; zoomed · compressed</span>
+            <span class="exif"><b>58 mm</b> eq · ≈ 2.2× farther</span>
+          </figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="./media/p2_close.jpg" alt="Same facade from up close at 26 mm: columns race toward a vanishing point, the tower disappears"></div>
+          <figcaption>
+            <span class="tag tag-good">Close &amp; wide · deep</span>
+            <span class="exif"><b>26 mm</b> eq · close</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="brief" style="margin:1.6rem 0 .8rem">Same experiment on a smaller building: from across the plaza at 86 mm, then walked up to 26 mm.</p>
+      <div class="pair">
+        <figure class="shot">
+          <div class="frame"><img src="./media/p2b_far.jpg" alt="Small classical building from across the plaza at 86 mm equivalent: flat, stacked, the trees pressed against the wall"></div>
+          <figcaption>
+            <span class="tag tag-bad">Far &amp; zoomed</span>
+            <span class="exif"><b>86 mm</b> eq · ≈ 3.3× farther</span>
+          </figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="./media/p2b_close.jpg" alt="Same building from close at 26 mm: the lamp post towers in front, the building recedes"></div>
+          <figcaption>
+            <span class="tag tag-good">Close &amp; wide</span>
+            <span class="exif"><b>26 mm</b> eq · close</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="why">
+        <h3>Why</h3>
+        <div>
+          <!-- ✍️ Lambert：为什么远处变焦的那张看起来"压扁"了？ -->
+          <p><span class="todo">Explain the flattening: what happens to the ratio of near-part size to far-part size as the camera moves back.</span></p>
+        </div>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 640 210" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace" font-size="11">
+          <defs>
+            <marker id="dot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="6" markerHeight="6"><circle cx="3" cy="3" r="2.6" fill="#1c1913"/></marker>
+          </defs>
+          <!-- background plane -->
+          <line x1="560" y1="12" x2="560" y2="198" stroke="#8b8375" stroke-dasharray="3 4"/>
+          <text x="566" y="24" fill="#8b8375">background</text>
+          <!-- subject -->
+          <line x1="300" y1="70" x2="300" y2="140" stroke="#1c1913" stroke-width="5" stroke-linecap="round"/>
+          <text x="284" y="172" fill="#1c1913">subject</text>
+          <!-- far camera, narrow fan -->
+          <g stroke="#b3331d" stroke-width="1.4" fill="none">
+            <line x1="40" y1="105" x2="560" y2="35"/>
+            <line x1="40" y1="105" x2="560" y2="175"/>
+          </g>
+          <rect x="30" y="97" width="16" height="16" fill="#b3331d"/>
+          <text x="12" y="90" fill="#b3331d">far · tele</text>
+          <!-- near camera, wide fan -->
+          <g stroke="#8b8375" stroke-width="1.4" fill="none" stroke-dasharray="5 3">
+            <line x1="180" y1="105" x2="440" y2="0"/>
+            <line x1="180" y1="105" x2="440" y2="210"/>
+          </g>
+          <rect x="170" y="97" width="16" height="16" fill="#8b8375"/>
+          <text x="178" y="152" fill="#8b8375" text-anchor="middle">near · wide</text>
+          <!-- background slice seen by far camera -->
+          <line x1="580" y1="35" x2="580" y2="175" stroke="#b3331d" stroke-width="3"/>
+          <text x="588" y="110" fill="#b3331d">slice</text>
+        </svg>
+        <figcaption>Both cameras frame the subject at the same size. Which one sees more of the background, and what does that do to its apparent size?</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ Part 3 ============ -->
+    <section class="part" id="part3">
+      <div class="part-head">
+        <span class="num">03</span>
+        <h2>The dolly zoom</h2>
+        <p class="brief">Camera moves back while zooming in; the subject stays put, the world behind it doesn't.</p>
+      </div>
+
+      <figure class="dolly">
+        <div class="frame"><img src="./media/dolly.gif" alt="Animated dolly zoom: the teddy bear stays the same size while the kitchen behind it swells up and closes in"></div>
+        <figcaption>
+          <span class="tag tag-good">Vertigo shot · 8 stills</span>
+          <span class="print-note">Animated GIF — plays on the live page: <span class="todo">https://…/proj0/</span></span>
+          <span class="exif"><b>26 → 174 mm</b> eq · camera ends ≈ 6.7× farther</span>
+        </figcaption>
+      </figure>
+
+      <!-- 静帧条：由 tools/make_gif.py --sheet 生成，或逐帧列出 -->
+      <div class="filmstrip">
+        <figure><img src="./media/dolly_01.jpg" alt="Dolly zoom still 1, 26 mm equivalent"><figcaption>01 · 26 mm</figcaption></figure>
+        <figure><img src="./media/dolly_02.jpg" alt="Dolly zoom still 2, 52 mm equivalent"><figcaption>02 · 52 mm</figcaption></figure>
+        <figure><img src="./media/dolly_03.jpg" alt="Dolly zoom still 3, 69 mm equivalent"><figcaption>03 · 69 mm</figcaption></figure>
+        <figure><img src="./media/dolly_04.jpg" alt="Dolly zoom still 4, 84 mm equivalent"><figcaption>04 · 84 mm</figcaption></figure>
+        <figure><img src="./media/dolly_05.jpg" alt="Dolly zoom still 5, 105 mm equivalent"><figcaption>05 · 105 mm</figcaption></figure>
+        <figure><img src="./media/dolly_06.jpg" alt="Dolly zoom still 6, 148 mm equivalent"><figcaption>06 · 148 mm</figcaption></figure>
+        <figure><img src="./media/dolly_07.jpg" alt="Dolly zoom still 7, 153 mm equivalent"><figcaption>07 · 153 mm</figcaption></figure>
+        <figure><img src="./media/dolly_08.jpg" alt="Dolly zoom still 8, 174 mm equivalent"><figcaption>08 · 174 mm</figcaption></figure>
+      </div>
+
+      <div class="why">
+        <h3>Why</h3>
+        <div>
+          <!-- ✍️ Lambert：为什么主体不动、背景却在"呼吸"？和 Part 1/2 是同一件事吗？ -->
+          <p><span class="todo">Explain the effect, and tie it back to parts 1 and 2.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <span>Photos: UC Berkeley campus &amp; home, 1 Sep 2026 · frames aligned on the bear and GIF assembled with a small Python script</span>
+      <span><a href="../">← portfolio</a> · <a href="https://cal-cs180.github.io/fa26/hw/proj0/index.html">assignment</a></span>
+    </footer>
+
+  </main>
+</body>
+</html>
