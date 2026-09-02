@@ -154,4 +154,6 @@ figcaption { display: flex; justify-content: space-between; gap: 1rem; align-ite
   .masthead, .part, .colophon { animation: none; }
   .filmstrip { overflow: visible; grid-auto-columns: 1fr; }
   .print-note { display: block; }
+  .dolly .frame { max-width: 400px; }
+  .part-head { break-inside: avoid; }
 }
