@@ -12,8 +12,7 @@
   var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ── pointer parallax ─────────────────────────────────────────────── */
-  var PARALLAX = '.dock,.headline,.lede,.pill,.play-wrap,' +
-                 '.stat--a,.stat--b,.card--about,.knob-float,.card--stove,.scroll';
+  var PARALLAX = '.headline,.lede,.pill,.card--about';
 
   var pointer = { x: 0, y: 0 }, smooth = { x: 0, y: 0 };
   var heroEl = document.getElementById('hero');
@@ -1182,7 +1181,7 @@
       limbSurface(src, t, th, hp, hn);
       if (hn.y < -0.25) continue;
       limbFrame(src, t);
-      var nearCards = onMain && t > 0.60;
+      var nearCards = onMain && t > 0.60 && t < 0.76;   /* only the stretch under the card is kept low */
       var dir = hn.clone().multiplyScalar(rand(0.4, 1.0))
         .addScaledVector(_ft, rand(-0.3, 1.2))
         .addScaledVector(UP, nearCards ? rand(-0.4, 0.5) : rand(0.6, 1.7)).normalize();
@@ -1258,7 +1257,7 @@
     scene.add(glowMesh);
 
     /* ---- falling petals: animated entirely in the vertex shader ---- */
-    var COUNT = (NARROW.matches || (window.innerWidth * window.innerHeight) < 620000) ? 600 : 1300;
+    var COUNT = (NARROW.matches || (window.innerWidth * window.innerHeight) < 620000) ? 600 : 1000;
     var pos = new Float32Array(COUNT * 3);
     var seed = new Float32Array(COUNT * 4);
     for (var i = 0; i < COUNT; i++) {

@@ -5,12 +5,12 @@ Live: <https://lambertalpha.github.io/cs180/>
 ## Layout
 
 ```
-index.html            首页：夜梅 hero（Three.js）+ 纸面项目列表
+index.html            首页：夜梅 hero（Three.js，只有标题、导语、一个按钮、一张卡）+ 墨色项目目录
 style.css             各 project 页共用的纸感样式（Bodoni Moda / Newsreader / IBM Plex Mono）
 petals.js             project 页报头的水墨梅枝 + 落瓣（纯 canvas）
 proj0/                Project 0 页面与 media/
 mei-assets/
-  scene.js            夜梅场景：枝干扫掠、花朵/花苞、落瓣、光标花瓣、小蛾、dock、视差、卡片显现
+  scene.js            夜梅场景：枝干扫掠、花朵/花苞、落瓣、光标花瓣、小蛾、视差（dock/卡片显现代码保留但页面上已无宿主）
   liquid.js           液态金属按钮（WebGL2 五通道），来自 Sylva，未改
   three.min.js        Three.js r128（本地）
   card-*.jpg          首页两张卡片的图
@@ -20,8 +20,9 @@ mei-assets/
 ## 加一个新 project
 
 1. 新建 `projN/index.html`，复制 `proj0/index.html` 的骨架，引用 `../style.css` 与 `../petals.js`。
-2. 首页 `index.html`：把 `.index` 列表里对应行的 `<span class="soon">` 换成 `<a href="./projN/">`；
-   需要的话把「Next up」卡片（`.card--stove`）换成新项目，图放 `mei-assets/card-*.jpg`（1000×520）。
+2. 首页 `index.html`：把 `.index` 列表里对应行的 `<span class="soon">` 换成 `<a href="./projN/">`，
+   meta 从 `soon` 改成「月份 · 三个关键词」；hero 上唯一的卡片 `.card--about` 永远只放**最新已交付**的项目
+   （换 img / label / h2 / href 即可，图放 `mei-assets/card-*.jpg`，1000×520），没有 next-up 卡。
 3. 本地预览：`python3 -m http.server 8180` 后开 <http://localhost:8180/>。
 
 ## 场景调参（mei-assets/scene.js）
